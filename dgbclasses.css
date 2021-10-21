@@ -1,0 +1,65 @@
+
+/***********************************************************************************
+
+Coding Challenge / CSS file
+
+App Name: To-Do App
+Co.: WEVENTURE
+Author: David G. Bonacho
+
+Date: 21/10/2021 15:54
+
+***********************************************************************************/
+
+boby, html {
+	background-color:#999999;
+	font-family: Hind, Verdana;
+}
+
+h1 {
+	text-align:center;
+}
+
+#cuad {
+	margin:auto;
+	border-radius: 5px;
+	padding:20px;
+	background-color:#EEEEEE;
+	max-width:600px;
+}
+
+.entrada {
+	width:93%;
+	border-radius: 5px;
+	padding: 15px;
+}
+
+#lista {
+	margin-top:40px;
+	clear: both;
+	border-radius: 5px;
+}
+
+ul {
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}
+li{
+	padding: 10px;
+}
+li:nth-child(odd) {
+	background-color: #fff;
+}
+li:nth-child(even) {
+	background-color:#E5E5E5;
+}
+
+.botonder {
+	float:right;
+}
+
+.close {
+	text-decoration:line-through;
+	color:#44CD1D;
+}
