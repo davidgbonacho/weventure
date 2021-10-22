@@ -31,9 +31,14 @@ class task
 function drawTasks() {
 	var html = '<ul>';
 	for(n=0;n<=tasks.length-1;n++){
-		cssstatus = 'active';
-		if(tasks[n].status!=1)cssstatus = 'close';
-		html+='<li class="'+cssstatus+'">'+tasks[n].task+'	<div class="botonder"><input name="uno" type="button" onClick="finishtask('+n+')" value="Delete"></div></li>';
+		if(tasks[n].status!=1){
+			cssstatus = 'close';
+			caption = 'Restore';
+		}else{
+			cssstatus = 'active';
+			caption = 'Delete';
+		}
+		html+='<li class="'+cssstatus+'">'+tasks[n].task+'	<div class="botonder"><input name="uno" type="button" onClick="finishtask('+n+')" value="'+caption+'"></div></li>';
 	}
 	html+='</ul>';
 	
@@ -55,7 +60,11 @@ function drawTasks() {
 // on the selected item
 //
 function finishtask(cual) {
-	tasks[cual].status = 0;
+	if(tasks[cual].status==1){
+		tasks[cual].status = 0;
+	}else{
+		tasks[cual].status = 1;
+	}
 	drawTasks();
 }
 
