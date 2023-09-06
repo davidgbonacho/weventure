@@ -69,7 +69,7 @@ function finishtask(cual) {
 }
 
 //
-// embty array and objects
+// empty array and objects
 //
 function clearall() {
 	tasks = [];
@@ -80,7 +80,8 @@ function clearall() {
 // detect enter key and add task 
 //
 document.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
+    // if (event.keyCode === 13) { // deprecated
+	if (event.key === 'Enter') {
 		textoin = document.getElementById('entrada').value
         if(textoin=='') {
 			alert("Please, enter the task you want to add...");
